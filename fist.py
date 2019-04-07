@@ -5,17 +5,17 @@ import urllib.error
 #在命名名称时不要用库的名，会导致库无效化
 
 #urlopen
-# response = urllib.request.urlopen('https://www.python.org/')
-# print(response.status)
-# print(response.getheaders())
-# print(response.getheader('Server'))
-# print(type(response))
-# print(response.read().decode('utf-8'))
+response = urllib.request.urlopen('https://www.python.org/')
+print(response.status)
+print(response.getheaders())
+print(response.getheader('Server'))
+print(type(response))
+print(response.read().decode('utf-8'))
 
 #urlopen+data
-# data = bytes(urllib.parse.urlencode({'word': 'hello'}).encode('utf8'))
-# response = urllib.request.urlopen('http://httpbin.org/post', data=data)
-# print(response.read())
+data = bytes(urllib.parse.urlencode({'word': 'hello'}).encode('utf8'))
+response = urllib.request.urlopen('http://httpbin.org/post', data=data)
+print(response.read())
 
 #urlopen+timeout
 try:
